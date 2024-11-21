@@ -4,18 +4,19 @@
 	{
 		public Guid Id { get; set; }
 		public string Name { get; set; } = string.Empty;
-		public int StudentId { get; set; }
+		public Guid StudentId { get; set; }
+		private int grade;
 		public int Grade
 		{
 			get
 			{
-				return Grade;
+				return grade;
 			}
 			set
 			{
 				if (value > 0 && value <= 100)
 				{
-					Grade = value;
+					grade = value;
 				}
 				else
 				{
